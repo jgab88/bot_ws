@@ -70,5 +70,6 @@
         ".vscode",
         ".vscode-insiders",
         ".devcontainer/devcontainer.json"
-    ]
+    ],
+    "cmake.sourceDirectory": "D:/Users/JerryG/PROJECTS/Farmbot/2023 - late/Code/vscode_template/bot_ws/src/roverrobotics_ros2/roverrobotics_description"
 }

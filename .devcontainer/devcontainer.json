@@ -7,7 +7,16 @@
 		}
 	},
 	"remoteUser": "ros",
-	"runArgs": [
+	"features": {
+		"desktop-lite":{
+			"password": "vscode",
+			"webPort": "6080",
+			"VncPort": "5909"
+		} 
+	},
+
+
+	"runArgs":[
 		"--network=host",
 		"--cap-add=SYS_PTRACE",
 		"--security-opt=seccomp:unconfined",
@@ -19,12 +28,13 @@
 		// "--device=/dev/dri"
 	],
 	"containerEnv": {
-		"DISPLAY": "${localEnv:DISPLAY}", // Needed for GUI try ":0" for windows
+		"DISPLAY": "DISPLAY=:0",  //"${localEnv:DISPLAY}", // Needed for GUI try ":0" for windows
 		"WAYLAND_DISPLAY": "${localEnv:WAYLAND_DISPLAY}",
 		"XDG_RUNTIME_DIR": "${localEnv:XDG_RUNTIME_DIR}",
 		"PULSE_SERVER": "${localEnv:PULSE_SERVER}",
 		"LIBGL_ALWAYS_SOFTWARE": "1" // Needed for software rendering of opengl
 	},
+	
 	// Set *default* container specific settings.json values on container create.
 	"customizations": {
 		"vscode": {
@@ -34,7 +44,7 @@
 				"DotJoshJohnson.xml",
 				"ms-azuretools.vscode-docker",
 				"ms-iot.vscode-ros",
-				"ms-python.python",
+				"ms-python.python", 
 				"ms-vscode.cpptools",
 				"redhat.vscode-yaml",
 				"smilerobotics.urdf",
